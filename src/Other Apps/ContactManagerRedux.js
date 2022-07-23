@@ -69,7 +69,7 @@ const AddPersonFormCon = connect(mapStateToProps, mapDispatchToProps)(AddPersonF
 
 function ContactManager() {
   return (
-    <div className='manager'>
+    <div>
       <AddPersonFormCon />
       <PeopleListCon />
     </div>
@@ -86,12 +86,12 @@ function mapStateToProps(state) {
 const store = createStore(reducer);
 
 const el = (
-<div className = "cont2">
-  <h1 className="header">Contact Manager</h1>
-  <Provider store={store}>
-    <ContactManager />
-  </Provider>
-</div> );
+  <div className = "manager">
+    <h1 className="header">Contact Manager</h1>
+    <Provider store={store}>
+      <ContactManager />
+    </Provider>
+  </div> );
 
 function App() {
   return el;
