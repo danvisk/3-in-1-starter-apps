@@ -1,0 +1,133 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  column-gap: 10px;
+  row-gap: 10px;
+  background-color: #bbb8b8;
+}
+
+.square {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #12131a;
+}
+
+svg {
+  stroke-width: 15px;
+  stroke-linecap: round;
+  stroke: #8fe60e;
+  fill: none;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.circle {
+  stroke: var(#8fe60e);
+  animation: draw 2s linear forwards;
+}
+
+.cross {
+  stroke: #e04bc3
+}
+
+.cross line:nth-of-type(1) {
+  animation: 1s linear forwards draw;
+}
+
+.cross line:nth-of-type(2) {
+  animation: 1s linear 0.2s forwards draw;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.result {
+  position: absolute;
+  line-height: 6em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 3em;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+}
+
+.h {
+  font-family: 'Lets Coffee', sans-serif;                                     
+  position: absolute;
+  top: 25px;
+  font-size: 3.5em;
+}
+
+.tic {
+  color: palevioletred
+
+}
+
+.tac {
+  color: lightseagreen;
+}
+
+.toe {
+  color: #ecc206;
+}
+
+.button {
+  padding:7px;
+  font-size: 0.5em;
+  position: relative;
+  top: -100px;
+  border-color:black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+  
