@@ -25,19 +25,20 @@
   white-space: nowrap; 
 }
 
+.form {
+  margin-top: 100px; }
+
 .box2 {
   font-size: 25px;
-}
-
-.form {
-  margin-top: 100px;
-}
+  padding: 4px;}
 
 .but {
   margin-left:7px;
   font-size: 25px;
-  background-color: lightcoral
-}
+  background-color: lightcoral;
+  padding: 4px; 
+  padding-bottom: 5px;}
+
 
 body {
   background-color: #12131a;
